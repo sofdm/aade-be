@@ -3,8 +3,10 @@ package com.aade.aadebe.dtos;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
+
 import javax.validation.constraints.Size;
 import java.io.Serializable;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -20,26 +22,35 @@ public class BasicInfoDto implements Serializable {
     @JsonProperty("doyDescr")
     private String doyDescr;
 
-    @JsonProperty("firmFlag")
-    private String firmFlag;
-
-    @JsonProperty("deactivationFlag")
-    private String deactivationFlag;
+    @JsonProperty("iNiFlag")
+    private String iNiFlag;
 
     @JsonProperty("onomasia")
     private String onomasia;
 
-    @JsonProperty("ninLegalPurpose")
-    private Integer ninLegalPurpose;
+    @JsonProperty("mothersFirstName")
+    private String mothersFirstName;
 
-    @JsonProperty("ninLegalPurposeDescr")
-    private String ninLegalPurposeDescr;
+    @JsonProperty("birthDate")
+    private Date birthDate;
 
-    @JsonProperty("ninLegalStatus")
-    private Integer ninLegalStatus;
+    @JsonProperty("birthPlace")
+    private String birthPlace;
 
-    @JsonProperty("ninLegalStatusDescr")
-    private String ninLegalStatusDescr;
+    @JsonProperty("cntResidenceDescr")
+    private String cntResidenceDescr;
+
+    @JsonProperty("residenceAddress")
+    private String residenceAddress;
+
+    @JsonProperty("residenceAddressNo")
+    private String residenceAddressNo;
+
+    @JsonProperty("residenceZipCode")
+    private String residenceZipCode;
+
+    @JsonProperty("residenceParDescr")
+    private String residenceParDescr;
 
     @JsonProperty("firmCommerTitle")
     private String firmCommerTitle;
@@ -58,19 +69,4 @@ public class BasicInfoDto implements Serializable {
 
     @JsonProperty("firmParDescr")
     private String firmParDescr;
-
-    @JsonProperty("frmFstStateDescr")
-    private String frmFstStateDescr;
-
-    @JsonProperty("firmPhone")
-    private String firmPhone;
-
-    public BasicInfoDto(String afm, String doy, String doyDescr, String firmFlag, String deactivationFlag, String onomasia) {
-        this.afm = afm;
-        this.doy = doy;
-        this.doyDescr = doyDescr;
-        this.firmFlag = firmFlag;
-        this.deactivationFlag = deactivationFlag;
-        this.onomasia = onomasia;
-    }
 }
