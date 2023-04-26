@@ -20,7 +20,7 @@ public class BasicInfo implements Serializable {
     @Column(name = "id", nullable = false, updatable = false, insertable = false)
     private Long Id;
 
-    @Column(name = "afm")
+    @Column(name = "afm", unique = true)
     @NonNull
     @NotNull
     @Size(max = 9)
